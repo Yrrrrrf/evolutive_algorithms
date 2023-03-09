@@ -3,7 +3,6 @@
     <div align="center">Eight Puzzle Solver Algorithms</div>
 </h1>
 
-
 This is a simple implementation of the 8-puzzle game using the A* algorithm. The A* algorithm is a best-first search algorithm that uses a heuristic function to guide the search. The heuristic function used in this implementation is the Manhattan distance.
 
 This report also contains the implementation of the most popular Search Algorithms.
@@ -13,14 +12,14 @@ This report also contains the implementation of the most popular Search Algorith
 - [Main Report](./reports/00_main_report.ipynb)
 
 - [Search Algorithms](./reports/search_agorithms.ipynb)
-    - [Informed Search](./reports/informed_search_algorithms.ipynb)
-        This kind of search uses a heuristic function to guide the search. The heuristic function is a function that estimates the cost of the cheapest path from the current node to the goal node. The heuristic function is used to guide the search by assigning a cost to each node. The node with the lowest cost is expanded first.
+    - [Informed Search](./reports/informed_search_algorithms.ipynb) <br/>
+    This kind of search uses a heuristic function to guide the search. The heuristic function is a function that estimates the cost of the cheapest path from the current node to the goal node. The heuristic function is used to guide the search by assigning a cost to each node. The node with the lowest cost is expanded first.
         - A* Search (A*)
         - Hill Climbing Search (HCS)
         - Greedy Best-First Search (GBFS)
         - Graph Search (GS)
 
-    - [Uninformed Search](./reports/uninformed_search_algorithms.ipynb)
+    - [Uninformed Search](./reports/uninformed_search_algorithms.ipynb) <br/>
         This search is guided by the order in which the nodes are expanded.
         - Breadth First Search (BFS)
         - Depth-First Search (DFS)
@@ -36,7 +35,7 @@ This report also contains the implementation of the most popular Search Algorith
 
 Use these commands to run the project:
 ```python
-python src/main.py  # run main.py
+py src/main.py  # run main.py
 ```
 
 ## Directory Structure
@@ -47,14 +46,14 @@ project_name/  # root directory
 │   LICENSE.md  # https://choosealicense.com/
 │   README.md  # this file
 │   requirements.txt  # pip freeze > requirements.txt
+├───reports/  # jupyter notebooks (exploratory analysis, etc.)
 ├───resources/  # resources (images, data, etc.)
 │   └───img/  # images
 │   └───attritions.md  # attritions (images, data, etc.)
-├───src/  # source files
-│   ├───components/  # components
-│   ├───config/  # config files
-│   └───main.py  # main entry point
-├───reports/  # jupyter notebooks (exploratory analysis, etc.)
+└───src/  # source files
+    ├───components/  # components
+    ├───config/  # config files
+    └───main.py  # main entry point
 ```
 
 ## License
