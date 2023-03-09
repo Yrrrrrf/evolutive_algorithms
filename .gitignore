@@ -130,5 +130,5 @@ dmypy.json
 
 # ignore data
 reports/doc/
-
 n_puzzle_solver/
+

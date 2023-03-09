@@ -43,6 +43,7 @@ def main() -> None:
             return True
         return False
 
+
     #1,8,2,0,4,3,7,6,5 is solvable
     #2,1,3,4,5,6,7,8,0 is not solvable
 
@@ -50,13 +51,10 @@ def main() -> None:
     # else:
     #     print("Not solvable")
 
-        BFS_solution = BFS(root, n)
-    DFS_solution = DFS(root, n)
-    Greedy_solution = Greedy(root, n)
-    AStar_solution = AStar_search(root, n)
-
-
-
+    # BFS_solution = BFS(root, n)
+    # DFS_solution = DFS(root, n)
+    # Greedy_solution = Greedy(root, n)
+    # AStar_solution = AStar_search(root, n)
 
 
 if __name__ == "__main__":
