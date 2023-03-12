@@ -1,31 +1,21 @@
 <h1 align="center">
     <img src="resources/img/puzzle.png" alt="Digital Strategy" width="200">
-    <div align="center">Eight Puzzle Solver Algorithms</div>
+    <div align="center">Evolutive Algorithms</div>
 </h1>
 
-This is a simple implementation of the 8-puzzle game using the A* algorithm. The A* algorithm is a best-first search algorithm that uses a heuristic function to guide the search. The heuristic function used in this implementation is the Manhattan distance.
+## Abstract
 
-This report also contains the implementation of the most popular Search Algorithms.
+This is a implementation of some of the most used [Search Algorithms](./reports/00_main_report.ipynb) to solve the Eight Puzzle Problem.
 
-## Table of Contents
+The main goal of this project is to compare the performance of the algorithms and to understand the differences between them.
 
-- [Main Report](./reports/00_main_report.ipynb)
+NOTE: The project is still in development and the algorithms had been tested in the **eight puzzle problem** (the algorithms will be tested in other problems in the future).
 
-- [Search Algorithms](./reports/search_agorithms.ipynb)
-    - [Informed Search](./reports/informed_search_algorithms.ipynb) <br/>
-    This kind of search uses a heuristic function to guide the search. The heuristic function is a function that estimates the cost of the cheapest path from the current node to the goal node. The heuristic function is used to guide the search by assigning a cost to each node. The node with the lowest cost is expanded first.
-        - A* Search (A*)
-        - Hill Climbing Search (HCS)
-        - Greedy Best-First Search (GBFS)
-        - Graph Search (GS)
 
-    - [Uninformed Search](./reports/uninformed_search_algorithms.ipynb) <br/>
-        This search is guided by the order in which the nodes are expanded.
-        - Breadth First Search (BFS)
-        - Depth-First Search (DFS)
-            - Depth-First Limited Search (DLS)
-            - Depth-First Iterative Deepening Search (IDS)
-        - Uniform Cost Search (UCS)
+## Contents
+
+The contents are deeply explained in the [main report](/reports/00_main_report.ipynb).
+
 
 ## Setup
 

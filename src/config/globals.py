@@ -5,7 +5,7 @@ class Config(Enum):
     """
     Application configuration
     """
-    NAME: str = "n Puzzle Solver"
+    NAME: str = "Evolutive Alrogithms"
     VERSION: str = "v0.1.0"
     
     # App settings

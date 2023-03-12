@@ -6,18 +6,16 @@ Author: Yrrrrrf
 
 #? Imports ------------------------------------------------------------------------------------
 
-# Python imports
-import pygame
-
 # Own imports
 from config.globals import Config  # import config
 from components.informed_search import *  # import informed search algorithms
 from components.uninformed_search import *  #  import uninformed search algorithms
 from components.app import App  # import app class
+from components.n_puzzle import Puzzle  # import puzzle class
+
 
 # Import tests
 from test.test import Test  #  import test class
-
 
 #? Logic --------------------------------------------------------------------------------------
 
@@ -28,49 +26,19 @@ def main() -> None:
 
     It is also responsible for setting up the logging system and configuring it.
     """
-    print("Welcome to the 8 puzzle solver.")
 
 
-    # instantiate app class
-    app = App()  # instantiate app class
+    app: App = App()  # create app instance
+    # Once created, the app will run until the user closes the window
+    # The fisrt thing is to check if the initial state is solvable (also generates the goal state)
+    # app.run()  # run app 
+    solvable: Puzzle = Puzzle(
+        initial_state=[1, 2, 3, 4, 5, 6, 7, 8, 0],
+    )  # create puzzle instance
 
-    # n = int(input("Enter n\n"))
-    # print("Enter your" ,n,"*",n, "puzzle")
-    # root = []
-    # for i in range(0,n*n):
-    #     p = int(input())
-    #     root.append(p)
-
-    # print("The given state is:", root)
-
-
-    # #count the number of inversions       
-    # def inv_num(puzzle):
-    #     inv = 0
-    #     for i in range(len(puzzle)-1):
-    #         for j in range(i+1 , len(puzzle)):
-    #             if (( puzzle[i] > puzzle[j]) and puzzle[i] and puzzle[j]):
-    #                 inv += 1
-    #     return inv
-
-    # def solvable(puzzle): #check if initial state puzzle is solvable: number of inversions should be even.
-    #     inv_counter = inv_num(puzzle)
-    #     if (inv_counter %2 ==0):
-    #         return True
-    #     return False
-
-
-    #1,8,2,0,4,3,7,6,5 is solvable
-    #2,1,3,4,5,6,7,8,0 is not solvable
-
-
-    # else:
-    #     print("Not solvable")
-
-    # BFS_solution = BFS(root, n)
-    # DFS_solution = DFS(root, n)
-    # Greedy_solution = Greedy(root, n)
-    # AStar_solution = AStar_search(root, n)
+    unsolvable: Puzzle = Puzzle(
+        initial_state=[1, 2, 3, 4, 5, 6, 8, 7, 5, 0],
+    )  # create puzzle instance
 
 
 if __name__ == "__main__":
