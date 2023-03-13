@@ -1,6 +1,9 @@
 """
-Main module for eight_puzzle
+Main module for evolutive algorithms
+This module contains the script that launch the GUI that shows the n-puzzle game. (TODO)
+
 Author: Yrrrrrf
+Date: Monday 13th, March 2023
 """
 
 
@@ -8,14 +11,14 @@ Author: Yrrrrrf
 
 # Own imports
 from config.globals import Config  # import config
-from components.informed_search import *  # import informed search algorithms
-from components.uninformed_search import *  #  import uninformed search algorithms
+from components import informed_search  # import informed search algorithms
+from components import uninformed_search  #  import uninformed search algorithms
 from components.app import App  # import app class
 from components.n_puzzle import Puzzle  # import puzzle class
 
-
 # Import tests
-from test.test import Test  #  import test class
+from test.unit_test import Test  # import test class
+
 
 #? Logic --------------------------------------------------------------------------------------
 
@@ -26,19 +29,15 @@ def main() -> None:
 
     It is also responsible for setting up the logging system and configuring it.
     """
-
-
-    app: App = App()  # create app instance
     # Once created, the app will run until the user closes the window
-    # The fisrt thing is to check if the initial state is solvable (also generates the goal state)
-    # app.run()  # run app 
-    solvable: Puzzle = Puzzle(
-        initial_state=[1, 2, 3, 4, 5, 6, 7, 8, 0],
-    )  # create puzzle instance
+    # app: App = App()  # create app instance
+    # app.run()  # run app
 
-    unsolvable: Puzzle = Puzzle(
-        initial_state=[1, 2, 3, 4, 5, 6, 8, 7, 5, 0],
-    )  # create puzzle instance
+    # The fisrt thing is to check if the initial state is solvable (also generates the goal state)
+    solvable: Puzzle = Puzzle(initial_state=[1, 2, 3, 4, 5, 6, 7, 8, 0],)  # create puzzle instance
+    unsolvable: Puzzle = Puzzle(initial_state=[1, 2, 3, 4, 5, 6, 8, 7, 0],)  # create puzzle instance
+
+    # excetuce the informed_algorithms.py file main function
 
 
 if __name__ == "__main__":
@@ -52,4 +51,10 @@ if __name__ == "__main__":
 
     # Test().run_all()  # run all the tests from the src/test/test.py file
     main()  # run main function
+
+
+# Laberinths
+# 8 Queens
+# 8 Puzzle (3x3)
+# (n^2)-1 Puzzle (nxn)
 
